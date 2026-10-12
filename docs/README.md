@@ -6,21 +6,6 @@ Mini ATS/CRM helps recruitment teams manage **clients, job openings, candidates,
 
 ---
 
-## 🚀 Project Status
-
-**Status:** Working locally and ready for GitHub
-
-### Current deployment plan
-
-* **Source Code:** GitHub
-* **Frontend:** GitHub Pages
-* **Backend:** To be deployed on a separate free Java/Spring Boot hosting platform
-* **Database:** H2 for local development / MySQL for production
-
-> The backend is not hosted on GitHub Pages because GitHub Pages supports static websites, not Spring Boot server applications.
-
----
-
 ## ✨ Features
 
 * Client management
@@ -295,252 +280,29 @@ Base URL:
 | DELETE | `/applications/{id}`           | Remove application        |
 
 ---
+📸 Screenshots
 
-# 🌐 GitHub Repository
+Add your application screenshots to the screenshots/ folder in the repository.
 
-The source code for this project is maintained on GitHub.
+1. Client Management
 
-Repository:
+![Client Management](Clients.png)
 
-```text
-https://github.com/YOUR-USERNAME/mini-ats-crm
-```
+2. Job Management
 
-Replace `YOUR-USERNAME` with your GitHub username after creating the repository.
+![Client Management](Jobs.png)
 
----
+3. Candidate Management
 
-# 🚀 GitHub Setup
+![Client Management](Candidates.png)
 
-## 1. Create GitHub Repository
+4. Kanban Hiring Pipeline
 
-Create a new **public** repository named:
+![Client Management](Hiring_Pipeline.png)
 
-```text
-mini-ats-crm
-```
+5. Application Tracking
 
-Do not initialize the repository with:
 
-* README
-* `.gitignore`
-* License
-
-The local project already contains these files.
-
----
-
-## 2. Initialize Git Locally
-
-From the project root:
-
-```bash
-git init -b main
-```
-
-Check:
-
-```bash
-git status
-```
-
----
-
-## 3. Add Files
-
-```bash
-git add .
-```
-
-Check the files before committing:
-
-```bash
-git status
-```
-
-Make sure files such as these are NOT being uploaded:
-
-```text
-target/
-.idea/
-.env
-*.log
-```
-
----
-
-## 4. Create Commit
-
-```bash
-git commit -m "Initial commit: Mini ATS CRM"
-```
-
----
-
-## 5. Connect GitHub Repository
-
-Replace `YOUR-USERNAME` with your GitHub username:
-
-```bash
-git remote add origin https://github.com/YOUR-USERNAME/mini-ats-crm.git
-```
-
-Verify:
-
-```bash
-git remote -v
-```
-
----
-
-## 6. Push to GitHub
-
-```bash
-git push -u origin main
-```
-
-After the push completes, refresh your GitHub repository.
-
----
-
-# 🌍 Deploy Frontend with GitHub Pages
-
-GitHub Pages can host the static frontend of this project.
-
-The Spring Boot backend must be hosted separately.
-
-GitHub Pages supports static files and can publish an existing repository using a branch or GitHub Actions workflow.
-
-## GitHub Pages URL
-
-After deployment, the frontend will normally be available at:
-
-```text
-https://YOUR-USERNAME.github.io/mini-ats-crm/
-```
-
----
-
-## GitHub Pages Using GitHub Actions
-
-This project contains:
-
-```text
-.github/workflows/deploy-frontend.yml
-```
-
-The workflow is intended to deploy the `frontend/` directory.
-
-### Configure GitHub Pages
-
-1. Open the GitHub repository.
-2. Go to **Settings**.
-3. Open **Pages**.
-4. Under **Build and deployment**.
-5. Set **Source** to:
-
-```text
-GitHub Actions
-```
-
-GitHub documents GitHub Actions as a supported publishing source for Pages.
-
-6. Push your project to `main`.
-
-7. Open the **Actions** tab.
-
-8. Wait for the frontend deployment workflow to complete.
-
-9. Open the published GitHub Pages URL.
-
-GitHub notes that publishing can take several minutes after a push.
-
----
-
-# ⚠️ Backend Deployment
-
-GitHub Pages **cannot run the Spring Boot backend**.
-
-Therefore, the frontend and backend are deployed separately:
-
-```text
-Frontend
-GitHub Pages
-      │
-      │ REST API
-      ▼
-Backend
-Separate Java/Spring Boot hosting
-      │
-      ▼
-MySQL
-```
-
-A free hosting provider for the Spring Boot backend will be selected separately.
-
-Until the backend is deployed, the GitHub Pages frontend will not be able to use the production API.
-
----
-
-# 🔐 Security
-
-Never commit sensitive information to GitHub.
-
-Do not upload:
-
-```text
-.env
-database passwords
-API keys
-JWT secrets
-private credentials
-```
-
-Also avoid uploading personal documents such as:
-
-```text
-resume files
-identity documents
-private certificates
-```
-
----
-
-# 🗄️ Database
-
-### Local Development
-
-The project can use H2 for convenient local development.
-
-### Production
-
-The production configuration is prepared for MySQL.
-
-The final production database and backend hosting provider will be configured separately.
-
----
-
-# 🧪 Testing Checklist
-
-Before production deployment, verify:
-
-* [ ] Backend starts successfully
-* [ ] `/api/health` returns `UP`
-* [ ] Clients can be created
-* [ ] Jobs can be created
-* [ ] Candidates can be created
-* [ ] Applications can be created
-* [ ] Kanban stages work
-* [ ] Drag-and-drop works
-* [ ] Stage dropdown works
-* [ ] Delete operations work
-* [ ] Duplicate applications are prevented
-* [ ] Frontend loads correctly
-* [ ] GitHub Pages deployment succeeds
-* [ ] Production backend URL is configured
-* [ ] CORS allows the GitHub Pages origin
-
----
 
 # 📸 Project Highlights
 
@@ -577,20 +339,6 @@ Rejected candidates can be moved to:
 ```text
 Rejected
 ```
-
----
-
-# 💼 Portfolio Description
-
-> **Mini ATS/CRM** — A full-stack recruitment management application built with Java 17 and Spring Boot. The system provides client, job, candidate, and application management with a visual drag-and-drop Kanban hiring pipeline. The backend uses Spring Data JPA and Hibernate to expose REST APIs, while the frontend uses HTML, CSS, and Vanilla JavaScript.
-
----
-
-# 📄 Resume Bullet
-
-> Developed a full-stack Applicant Tracking System and CRM using Java 17, Spring Boot, Spring Data JPA, Hibernate, REST APIs, H2/MySQL, HTML, CSS, and JavaScript, implementing client/job/candidate management and a drag-and-drop Kanban recruitment pipeline with validation, DTOs, exception handling, and CORS configuration.
-
----
 
 # 🔮 Future Enhancements
 
